@@ -1,0 +1,55 @@
+{
+  "id": "timestamp",
+  "name": "Timestamp Stamp",
+  "description": "Puts subtle date/time label into a corner of the capture.",
+  "type": "processor",
+  "entry": "timestamp.js",
+  "schema": {
+    "fields": [
+      {
+        "key": "format",
+        "label": "Format",
+        "type": "select",
+        "default": "datetime",
+        "options": [
+          { "label": "2026-04-20 14:32",   "value": "datetime" },
+          { "label": "2026-04-20",         "value": "date" },
+          { "label": "14:32",              "value": "time" },
+          { "label": "Apr 20, 2026 2:32pm", "value": "pretty" }
+        ]
+      },
+      {
+        "key": "anchor",
+        "label": "Position",
+        "type": "select",
+        "default": "bottom-right",
+        "options": [
+          { "label": "Top-left",     "value": "top-left" },
+          { "label": "Top-right",    "value": "top-right" },
+          { "label": "Bottom-left",  "value": "bottom-left" },
+          { "label": "Bottom-right", "value": "bottom-right" }
+        ]
+      },
+      {
+        "key": "size",
+        "label": "Text size",
+        "type": "number",
+        "default": 14
+      },
+      {
+        "key": "color",
+        "label": "Color",
+        "type": "string",
+        "default": "#ffffff",
+        "placeholder": "#ffffff"
+      },
+      {
+        "key": "opacity",
+        "label": "Opacity",
+        "type": "number",
+        "default": 0.7,
+        "help": "0 = invisible, 1 = opaque."
+      }
+    ]
+  }
+}
